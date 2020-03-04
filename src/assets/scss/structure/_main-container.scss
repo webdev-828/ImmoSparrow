@@ -1,0 +1,305 @@
+#main-container {
+  padding-top: 0px !important;
+  .objects-list {
+    padding: 20px;
+  }
+  // V-Bar HEIGHTS
+  // Common height with a simple header container
+  &.standard-vb {
+    .vb-content {
+      height: calc(100vh - 107px) !important; /* Fallback */
+      height: calc((var(--vh, 1vh) * 100) - 107px) !important;
+    }
+  }
+  // V-bar height with no header block
+  &.no-head-vb {
+    .vb-content {
+      height: calc(100vh - 60px) !important; /* Fallback */
+      height: calc((var(--vh, 1vh) * 100) - 60px) !important;
+    }
+  }
+  &.no-head-state {
+    margin-top: 60px;
+  }
+  &.with-filters {
+    .vb-content {
+      height: calc(100vh - 170px) !important; /* Fallback */
+      height: calc((var(--vh, 1vh) * 100) - 170px) !important;
+    }
+  }
+}
+// Dashboard Screen Specific Styles
+#dashboard-diagrams {
+  #main-container {
+    .dash-row.in-field {
+      padding-top: 15px;
+    }
+    &.edit-mode {
+      .dash-row {
+        margin-left: 40px;
+        @include lg {
+          margin-left: 0px;
+        }
+      }
+    }
+    &.with-second-sidebar .content {
+      margin-left: 10px;
+      margin-right: 10px;
+      @include lg {
+        margin-left: 320px;
+      }
+    }
+    .content {
+      margin-left: 10px;
+      margin-right: 10px;
+      @include lg {
+        margin-left: 30px;
+        margin-right: 30px;
+      }
+    }
+  }
+}
+// Inbox Specific Styles
+#inbox, #portfolio {
+  #main-container .content {
+    transition: margin-left .3s ease-in-out;
+    margin-left: 0;
+  }
+  #main-container.with-second-sidebar .content {
+    margin-left: 0;
+    @include lg {
+      margin-left: 320px;
+    }
+  }
+}
+// Scroll Page Header (see Inbox)
+.page-hdr {
+  margin-bottom: 35px;
+  @include lg {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    margin-bottom: 30px;
+  }
+  .header-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-bottom: 1px solid #ebebeb;
+    .titles {
+      flex-grow: 1;
+      padding: 13px;
+      padding-bottom: 7px;
+      .subscription-name {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 18px;
+        font-weight: 700;
+        .renameInput {
+          display: inline-block;
+          width: 350px;
+          font-weight: 400;
+        }
+      }
+      &.with-control-block {
+        display: flex;
+        .subscription-name {
+          flex-grow: 1;
+          .description {
+            font-weight: 400;
+          }
+        }
+        .control-group {}
+      }
+    }
+    .titles + .titles {
+      padding-top: 0;
+    }
+    .controls {
+      position: absolute;
+      right: 0;
+      .btn { width: 100%; }
+      padding: 13px;
+      padding-top: 0;
+    }
+    @include lg {
+      //flex-direction: row;
+      .controls {
+        flex-grow: 0;
+        text-align: right;
+        padding-top: 13px;
+        .btn { width: auto; }
+      }
+    }
+  }
+  .filters-section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    background-color: #fff;
+    @include lg {
+      flex-direction: row;
+    }
+    .filter-instace {
+      padding-top: 3px;
+      padding-bottom: 2px;
+      border-right: 1px solid #ebebeb;
+      .btn-default {
+        height: 33px;
+        border-color: transparent;
+        background-color: transparent;
+        outline: none;
+      }
+      &:hover:not(.slider) {
+        background-color: #edf6fd;
+      }
+      &.active {
+        background-color: $blue;
+        border-right: 1px solid #4776B1;
+        .btn-default {
+          color: #fff;
+        }
+        &:hover {
+          background-color: #6B9EDE;
+        }
+      }
+      &.slider {
+        padding-left: 10px;
+        padding-right: 10px;
+        label {
+          margin-top: 6px;
+        }
+      }
+      &:last-child {
+        border-right: none;
+        padding-right: 2px;
+      }
+      &.dropdown {
+        display: flex;
+        padding: 0;
+        .instance-icon {
+          height: 40px;
+          padding-left: 10px;
+          line-height: 40px;
+          font-size: 12px;
+        }
+        &:hover {
+          background: transparent;
+        }
+      }
+    }
+    .filter-separator {
+      flex-grow: 1;
+      border-right: 1px solid #ebebeb;
+    }
+  }
+  .sidebar-select.in-filters-bar {
+    border: none;
+    .multiselect__tags {
+      padding: 4px 40px 0 0px;
+      .multiselect__single {
+        margin-bottom: 0;
+        margin-top: 5px;
+      }
+      .multiselect__input {
+        margin-top: 5px;
+      }
+      .multiselect__placeholder {
+        margin-top: 4px;
+        margin-bottom: 0;
+      }
+    }
+    .multiselect__content-wrapper {
+      width: 250px;
+      margin-left: -22px;
+      margin-top: 1px;
+      box-shadow: 0 12px 25px -12px rgba(0, 0, 0, 0.4);
+    }
+  }
+}
+.filters-container {
+  position: relative;
+  margin-bottom: 0;
+  padding: 8px 13px 7px;
+  background: $tablerowbg;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  .control-part {
+    flex-shrink: 0;
+    margin-right: 10px;
+    &.wider {
+      width: 240px;
+    }
+    input.form-control {
+      height: 23px;
+    }
+    .input-group-addon {
+      padding: 0 4px;
+      padding-left: 2px;
+    }
+  }
+  .tags-part {
+    flex-grow: 1;
+    line-height: 12px;
+  }
+  //border-top: 1px solid $block-border;
+  .filter-group {
+    margin-bottom: 7px;
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+    .group-label {
+      margin-bottom: 5px;
+      font-size: 10px;
+      letter-spacing: .3px;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    .group-content {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      .filter {
+        padding: 3px 5px 4px;
+        font-size: 11px;
+        line-height: 11px;
+        border: 1px solid $blue;
+        color: $blue;
+        border-radius: 2px;
+        font-weight: 600;
+        cursor: pointer;
+        &:not(:last-child) {
+          margin-right: 5px;
+        }
+        &:hover {
+          background-color: $light-blue;
+        }
+        &.selected {
+          color: $white;
+          background-color: $blue;
+        }
+      }
+      input.in-filters {
+        display: inline-block;
+        width: 80px;
+        height: 20px;
+        line-height: 20px;
+        font-size: 10px;
+        padding-left: 4px;
+        padding-right: 4px;
+      }
+    }
+  }
+  @include lg {
+    flex-direction: row;
+  }
+}
+.filters-container + .filters-container {
+  padding-top: 0;
+}
+.main-section + .filters-container {
+  padding-left: 20px;
+  padding-right: 20px;
+}

@@ -1,0 +1,228 @@
+.list-selectable {
+  >li {
+    position: relative;
+    padding: 15px 20px 13px;
+    border-bottom: 1px solid #f3f3f3;
+    overflow: hidden;
+    .edit-button {
+      display: none;
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+    &:last-child {
+      border-bottom: none;
+    }
+    &:hover {
+      background-color: #edf6fd;
+      cursor: pointer;
+      .additional-controlls {
+        bottom: 5px;
+      }
+      .edit-button {
+        display: inline-block;
+      }
+    }
+    .additional-controlls {
+      position: absolute;
+      left: 20px;
+      right: 20px;
+      bottom: -33px;
+      transition: all .3s ease-in-out;
+      > .btn-group {
+        display: flex;
+        >.btn {
+          flex-grow: 1;
+          float: none;
+        }
+      }
+      &.liActiveRecord {
+        display: block;
+        left: 20px;
+        right: 20px;
+        bottom: 5px !important;
+      }
+    }
+    .sub-data {
+      margin-bottom: 2px;
+      font-size: 12px;
+      font-weight: 400;
+    }
+    .pipe-item {
+      box-shadow: 0 3px 8px 0 rgba(61, 90, 142, 0.4);
+      border-radius: 5px;
+      .item-description {
+        min-height: 120px;
+      }
+      .related-pipe {
+        position: relative;
+        margin-top: 8px;
+        margin-bottom: 4px;
+      }
+    }
+    &.has-controls {
+      &:hover {
+        .additional-controlls {
+          transform: scaleY(1);
+        }
+      }
+    }
+    &.active {
+      background-color: lighten($blue, 35%);
+      color: $blue;
+      font-weight: 600;
+    }
+    &.with-sublist {
+      &:hover {
+        background-color: $white;
+      }
+    }
+    &.no-hover {
+      &:hover {
+        background: transparent;
+        cursor: default;
+      }
+    }
+    &.no-overflow-hidden {
+      overflow: visible;
+    }
+  }
+  &.overcome-borders {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+  &.static-controls {
+    >li {
+      &:hover {
+        .additional-controlls {
+          bottom: -33px;
+        }
+      }
+      &.is-active {
+        background-color: #edf6fd;
+        box-shadow: inset 5px 0 0 0 #5c90d2;
+        .additional-controlls {
+          position: relative;
+          top: auto;
+          left: auto;
+          right: auto;
+          bottom: auto;
+        }
+        &:hover {
+          .additional-controlls {
+            bottom: auto;
+          }
+        }
+        &.new-item {
+          background-color: lighten($green, 40%);
+          box-shadow: inset 5px 0 0 0 $green;
+        }
+      }
+      &.is-inactive {
+        opacity: .5;
+      }
+    }
+  }
+  &.delete-mode {
+    >li:hover {
+      background-color: #f9eae8;
+    }
+  }
+}
+.pages-list {
+  .page {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 0;
+    padding-right: 20px;
+    border-top: 1px solid #ebebeb;
+    cursor: pointer;
+    &:hover {
+      background-color: #f9f9f9;
+    }
+    &:last-child {
+      border-bottom: 1px solid #ebebeb;
+    }
+    .main-part {
+      display: flex;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-left: 2px;
+      .order {
+        line-height: 30px;
+        font-size: 13px;
+        .btn-transparent {
+          background-color: transparent;
+          border-color: transparent;
+          outline: transparent;
+        }
+      }
+      .name {
+        flex-grow: 1;
+        line-height: 30px;
+        font-size: 13px;
+      }
+      .controls {
+      }
+    }
+    .secondary-part {
+      padding-left: 20px;
+    }
+  }
+}
+.btn-list {
+  >li {
+    margin-bottom: 2px;
+  }
+}
+.table-list {
+  padding-top: 7px;
+  .table-list-row {
+    display: flex;
+    padding-top: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 5px;
+    &:hover:not(:first-child) {
+      background-color: #ebebeb;
+      cursor: pointer;
+    }
+    .col {
+      padding: 4px 0;
+      font-size: 12px;
+    }
+    .col-head {
+      padding: 4px 0;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 11px;
+    }
+    .col-1 {
+      width: 10%;
+    }
+    .col-2 {
+      width: 35%;
+    }
+    .col-3 {
+      width: 35%;
+    }
+    .col-4 {
+      width: 20%;
+    }
+  }
+  .separator {
+    height: 1px;
+    background: rgba(0,0,0,.5);
+  }
+}
+// Inbox Specific Styles
+#inbox {
+  .objects-list {
+    overflow: auto;
+    height: auto;
+    &.list-compact {
+      overflow: hidden;
+      height: 58px;
+      //box-shadow: inset 0 -3px 10px 0 rgba(0,0,0,.2);
+    }
+  }
+}

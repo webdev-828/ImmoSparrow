@@ -1,0 +1,112 @@
+// Tooltips
+.tooltip {
+  display: block !important;
+  z-index: 10003;
+
+  .tooltip-inner {
+    background: $dark-blue;
+    color: $white;
+    border-radius: 2px;
+    padding: 7px 12px 6px;
+    box-shadow: 0 3px 7px 0 rgba(51, 63, 82, 0.3);
+  }
+
+  .tooltip-arrow {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    position: absolute;
+    margin: 5px;
+    border-color: $dark-blue;
+    z-index: 1;
+  }
+
+  &[x-placement^="top"] {
+    margin-bottom: 7px;
+
+    .tooltip-arrow {
+      border-width: 5px 5px 0 5px;
+      border-left-color: transparent !important;
+      border-right-color: transparent !important;
+      border-bottom-color: transparent !important;
+      bottom: -5px;
+      left: calc(50% - 5px);
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  &[x-placement^="bottom"] {
+    margin-top: 7px;
+
+    .tooltip-arrow {
+      border-width: 0 6px 6px 6px;
+      border-left-color: transparent !important;
+      border-right-color: transparent !important;
+      border-top-color: transparent !important;
+      top: -6px;
+      left: calc(50% - 6px);
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  &[x-placement^="right"] {
+    margin-left: 7px;
+
+    .tooltip-arrow {
+      border-width: 6px 6px 6px 0;
+      border-left-color: transparent !important;
+      border-top-color: transparent !important;
+      border-bottom-color: transparent !important;
+      left: -6px;
+      top: calc(50% - 6px);
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  &[x-placement^="left"] {
+    margin-right: 7px;
+
+    .tooltip-arrow {
+      border-width: 7px 0 7px 7px;
+      border-top-color: transparent !important;
+      border-right-color: transparent !important;
+      border-bottom-color: transparent !important;
+      right: -7px;
+      top: calc(50% - 7px);
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  &[aria-hidden='true'] {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .15s, visibility .15s;
+  }
+
+  &[aria-hidden='false'] {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity .15s;
+  }
+}
+.tooltip-cust {
+  opacity: 0;
+  width: 190px;
+  position: absolute;
+  z-index: 9999;
+  font-size: 12px;
+  pointer-events: none;
+  background-color: rgba(0,0,0,0.5);
+  color: #ffffff;
+  table {
+    width: 100%;
+  }
+  &__title {
+    text-align: center;
+    padding: 2px;
+  }
+}

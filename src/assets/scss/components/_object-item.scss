@@ -1,0 +1,119 @@
+.objects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 10px;
+  .object-item-wrap {
+    width: 50%;
+    position: relative;
+    padding: 3px 5px;
+  }
+}
+.object-item-wrap.single-item {
+  width: 100%;
+}
+.object-item {
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 14px;
+  transition: box-shadow .3s ease-in-out;
+  margin-bottom: 7px;
+  background: #FFFFFF;
+  box-shadow: 0 3px 8px 0 rgba(61,90,142,0.2);
+  border-radius: 5px;
+  cursor: pointer;
+  &.selected {
+    transform: translateY(0);
+  }
+  &:hover {
+      .item-description {
+          .item-picture {
+              opacity: .7;
+          }
+      }
+  }
+  &:active {
+    box-shadow: 0 3px 2px 0 rgba(61,90,142,0.1);
+      .item-description {
+          .item-picture {
+              opacity: 1;
+          }
+      }
+  }
+  .item-description {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: flex-end;
+      position: relative;
+      overflow: hidden;
+      min-height: 100px;
+      padding: 8px;
+      color: #fff;
+      text-shadow: 1px 1px 2px rgba(0,0,0,.8);
+      background-image: linear-gradient(-180deg, #E6EDF5 0%, #222C37 100%);
+      .item-picture {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          opacity: .4;
+          overflow: hidden;
+          background-size: cover;
+          background-position: center;
+          transition: all .3s ease-in-out;
+      }
+      .status, .address, .select-box {
+          z-index: 1;
+      }
+      .status {
+          position: absolute;
+          top: 8px;
+          left: 8px;
+          text-transform: uppercase;
+          letter-spacing: .03em;
+      }
+      .select-box {
+        position: absolute;
+        top: 7px;
+        right: 5px;
+        font-size: 14px;
+        text-shadow: none;
+        .css-checkbox {
+          margin: 0;
+        }
+      }
+      .address {
+          font-size: 13px;
+          line-height: 17px;
+          font-weight: 600;
+      }
+  }
+  .item-data {
+    padding: 0;
+  }
+  &.big-object {
+    box-shadow: 0 3px 13px 0 rgba(61,90,142,0.3);
+    .item-description {
+      min-height: 160px;
+      padding: 10px;
+      .address {
+        width: 70%;
+        font-size: 16px;
+        line-height: 22px;
+      }
+      .right-top {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        text-align: right;
+        .price {
+          font-size: 22px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

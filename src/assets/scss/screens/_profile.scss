@@ -1,0 +1,22 @@
+.profile .fade.show {
+  opacity: 1;
+}
+.profile .nav-link.active {
+  color: #646464;
+  background-color: #fff;
+  border-color: transparent;
+}
+.profile .nav-item > a {
+  margin-right: 0;
+  color: #646464;
+  font-weight: 600;
+  border: 1px solid transparent;
+  border-radius: 0;
+  line-height: 1.42857143;
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+}
+.profile .form-group {
+  margin-right: auto;
+}

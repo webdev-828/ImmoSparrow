@@ -1,0 +1,9 @@
+<template>
+  <div>
+    <div>
+      <mr-left-sidebar/>
+      <amap/>
+      <mr-right-sidebar/>
+    </div>
+  </div>
+</template>

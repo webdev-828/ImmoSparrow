@@ -1,0 +1,60 @@
+.dropdown-list-item {
+  position: relative;
+  cursor: pointer;
+  &.with-upgrade-module {
+    .upgrade-item {
+      opacity: .5;
+      display: flex;
+      padding: 7px 12px;
+      align-items: baseline;
+      .item-title {
+        flex-grow: 1;
+        padding-right: 5px;
+      }
+      .upgrade-label {
+        padding: 2px 4px;
+        font-size: 9px;
+        text-transform: uppercase;
+        color: #fff;
+        border-radius: 2px;
+        flex-shrink: 0;
+      }
+    }
+    .upgrade-module {
+      display: none;
+      position: absolute;
+      top: 0px;
+      left: -65px;
+      .popover {
+        display: block;
+        width: 210px;
+        text-align: center;
+      }
+    }
+    &:hover {
+      .upgrade-item {
+        background-color: #f9f9f9;
+        opacity: 1;
+      }
+      .upgrade-module {
+        display: block;
+      }
+    }
+  }
+  button {
+    background: none;
+    border: none;
+    width: 100%;
+    display: block;
+    padding: 7px 12px;
+    text-align: left;
+    font-weight: 400;
+    line-height: 1.42857143;
+    color: #333;
+    white-space: nowrap;
+    &.disabled {
+      color: grey;
+      cursor: not-allowed;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+// Legend
+.legend {
+  .legend-label {
+    display: flex;
+    font-size: 10px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    &:not(:last-child) {
+      margin-bottom: 4px;
+    }
+    .general-label {
+      flex-grow: 1;
+      color: #516173;
+      font-weight: 400;
+    }
+    .second-label {
+      text-align: right;
+      color: #273142;
+      font-weight: 700;
+    }
+  }
+  .color-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    transform: translateY(0px);
+    margin-right: 0;
+    border-radius: 50%;
+    background: rgba(201,201,201,0.50);
+  }
+  &.flex-legend {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .legend-label:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+}

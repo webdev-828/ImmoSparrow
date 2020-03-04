@@ -1,0 +1,64 @@
+#gate {
+  .vb-content {
+    height: 100vh !important; /* Fallback */
+    height: calc((var(--vh, 1vh) * 100)) !important;
+  }
+  .plate {
+    position: relative;
+    padding: 35px 20px 25px;
+    background: #FFFFFF;
+    box-shadow: 0 3px 4px 0 rgba(51,63,82,0.32);
+    border-radius: 4px;
+    .plate-cap {
+      margin-bottom: 10px;
+      margin-left: -20px;
+      margin-right: -20px;
+      padding: 5px;
+      background-color: $lightred;
+      border-top: 1px solid #efbdb6;;
+      border-bottom: 1px solid #efbdb6;;
+      font-size: 13px;
+      text-align: center;
+      .cap-message {}
+    }
+  }
+  .logo-img {
+    width: 130px;
+  }
+  .brand-line {
+    margin: 12px 0;
+    font-size: 11px;
+    color: #273142;
+    letter-spacing: 0.85px;
+    text-transform: uppercase;
+  }
+  .duplicateMail {
+    z-index: 1;
+    height: 40px;
+    margin-bottom: -40px;
+    font-size: 12px;
+    padding: 11px;
+    text-align: center;
+    width: 100%;
+    top: 40px;
+    position: fixed;
+  }
+  .regErrMsg {
+    z-index: 1;
+    height: 40px;
+    margin-bottom: -40px;
+    font-size: 12px;
+    padding: 11px;
+    text-align: center;
+  }
+  .inline-button {
+    background: none;
+    border: none;
+    color: #5c90d2;
+    transition: color 0.12s ease-out;
+    &:hover, &:active, &:focus {
+      color: #3169b1;
+      outline: none;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+// VARIABLES
+// add @import "./src/assets/scss/abstracts/variables"; in the begining of the <style> section of the targeted vue file
+$white: #ffffff;
+$black: #000;
+$blue: #5c90d2;
+$light-blue: #edf6fd;
+$red: #d26a5c;
+$block-border: #ebebeb;
+$dark-blue: #333F52;
+$amethyst: #a48ad4;
+$city: #ff6b6b;
+$flat: #44b4a6;
+$modern: #14adc4;
+$smooth: #ff6c9d;
+$gray: #999999;
+$gray-blue: #a3a9b3;
+$blue2: #70b9eb;
+$orange: #f3b760;
+$lightred: #f9eae8;
+$tablerowbg: #f9f9f9;
+$green: #46c37b;
+
+.bg-gradient-red-orange {
+  background-image: linear-gradient(90deg, #FF3073 0%, #FF6A43 100%);
+}
+.bg-gradient-gray {
+  background-image: linear-gradient(-180deg, #516173 3%, #3B4857 98%);
+}
+.fancy-shadow {
+  box-shadow: 0 12px 15px -10px rgba(0, 0, 0, 0.2);
+}
+.sidebar-shadow {
+  box-shadow: -12px 0 15px -10px rgba(0, 0, 0, 0.2);
+}

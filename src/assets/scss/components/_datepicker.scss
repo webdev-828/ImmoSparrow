@@ -1,0 +1,32 @@
+/* Datepicker custom CSS */
+.vdp-datepicker__calendar .cell.selected {
+  background-color: #5c90d2 !important;
+  border-color: #5c90d2 !important;
+  border-radius: 4px;
+  color: #fff !important;
+}
+.vdp-datepicker__calendar .cell:not(.blank):not(.disabled).day:hover, .vdp-datepicker__calendar .cell:not(.blank):not(.disabled).month:hover, .vdp-datepicker__calendar .cell:not(.blank):not(.disabled).year:hover {
+  border: 1px solid #fff;
+  background: #eee;
+  border-radius: 4px;
+}
+
+.vdp-datepicker__calendar header span {
+  border-radius: 4px;
+}
+
+.leftside-datepicker.vdp-datepicker__calendar {
+  left: 0px;
+  top: 40px;
+  width: 280px !important;
+}
+.rightside-datepicker.vdp-datepicker__calendar {
+  right: 0px;
+  top: 40px;
+  width: 280px !important;
+}
+.rightside-top-datepicker.vdp-datepicker__calendar {
+  right: 0px;
+  bottom: 40px;
+  width: 280px !important;
+}

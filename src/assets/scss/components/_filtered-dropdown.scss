@@ -1,0 +1,33 @@
+// VARIABLES
+// add @import "./src/assets/scss/filtered-dropdown.scss"; in the begining of the <style> section of the targeted vue file
+#filter-dropdown .flex-scroll, #deal-dropdown .flex-scroll, .filter-dropdown .flex-scroll {
+  overflow-y: scroll;
+  max-height: calc(100vh - 300px);
+  width: 350px;
+  &.expanded {
+    width: 420px;
+  }
+  &.short-width {
+    width: 200px;
+  }
+  .filter-row {
+    display: flex;
+    .name {
+      flex-grow: 1;
+      line-height: 23px;
+    }
+    .control {
+      .css-checkbox {
+        margin: 0;
+      }
+    }
+  }
+  .sub-data {
+    display: flex;
+    .left-section {
+      flex-grow: 1;
+      line-height: 22px;
+    }
+    .right-section {}
+  }
+}

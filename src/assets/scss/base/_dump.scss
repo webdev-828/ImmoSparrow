@@ -1,0 +1,361 @@
+// Sad Home of the Unsorted Styles
+// Sidebar item - this is on MR Portfolio Tab, actually we dont need this, we have a cooler design
+.sidebar-item {
+  display: flex;
+  border-bottom: 1px solid $block-border;
+  cursor: pointer;
+  .item-image {
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    width: 80px;
+    .image {
+      position: absolute;
+      display: block;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background-size: cover;
+      background-position: center;
+      transition: .3s all ease-out;
+    }
+  }
+  .item-content {
+    flex-grow: 1;
+    padding: 10px 12px;
+    .title {
+      margin-bottom: 5px;
+      font-size: 14px;
+      line-height: 18px;
+      font-weight: 600;
+    }
+    .address {
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+  &:hover {
+    background-color: $light-blue;
+    .item-image {
+      .image {
+        top: -10px;
+        left: -10px;
+        right: -10px;
+        bottom: -10px;
+      }
+    }
+  }
+}
+//
+// .fi{
+//   background-repeat: no-repeat;
+//   background-size: 100% 100%;
+//   margin-right: 10px;
+//   width: 20px;
+//   display: block;
+//   height: 20px;
+// }
+.vue-simple-progress-text {
+  text-align: right !important;
+}
+//
+@keyframes pulsebgshad {
+  0% {
+    box-shadow: 0 0 0 10px rgba(255,255,255,0.8);
+  }
+  70% {
+      box-shadow: 0 0 0 0 rgba(255,255,255,0);
+  }
+  100% {
+      box-shadow: 0 0 0 0 rgba(255,255,255,0);
+  }
+}
+//
+.deleted-block {
+  input, select, a[type=button], .dropdown, .multiselect__tag {
+    cursor: not-allowed;
+    background-color: #eee!important;
+    pointer-events: none;
+  }
+  .multiselect__tag-icon {
+    display: none;
+  }
+  .css-checkbox, .switch {
+    pointer-events: none;
+    span {
+      background-color: #eee!important;
+      border-color: #eee!important;
+    }
+  }
+  .toggle-template {
+    display: none;
+  }
+  a, .hovertr {
+    pointer-events: none;
+  }
+  .multiselect__tag {
+    padding-right: 10px;
+  }
+}
+//
+.image-section {
+  width: 60px;
+  height: 60px;
+  background-color: #D8D8D8;
+  border-radius: 4px;
+  background-size: cover;
+  background-position: center;
+}
+.image-section img {
+  max-width: 100%;
+  max-height: 100%;
+}
+//
+.cursor-none {
+  pointer-events: none;
+}
+.cursor-show {
+  cursor: pointer;
+}
+.blurredOut {
+  filter: blur(5px);
+  transition: filter .3s ease-in-out;
+}
+.empty {
+  cursor: pointer;
+}
+.hide-descr {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute!important;
+}
+.address_remove {
+  cursor: pointer;
+}
+.blur {
+  opacity: .3;
+}
+.polygon {
+  stroke: #d61683;
+  fill: skyblue;
+  stroke-width: 1px;
+}
+a.disabled {
+  color: #ccc !important;
+  cursor: not-allowed !important;
+}
+.absolute-error {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  .help-block {
+    position: absolute;
+    top: 100%;
+    white-space: nowrap;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+}
+/* DO NOT REMOVE THIS FROM CSS */
+.svgl {
+  float: left;
+  transform: scale(1, -1);
+  svg {
+    width: 280px;
+    height: 280px;
+  }
+}
+/**/
+.uploadedImg {
+  max-width: 100%;
+  max-height: 100%;
+}
+.block-content .avatar-ch__text {
+  margin-bottom: 0;
+  font-size: 12px;
+}
+.radial-progress-container {
+  position: relative;
+}
+.radial-progress-inner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.modal.zi-90000 {
+  background-color: rgba(0,0,0,.4);
+  z-index: 90000;
+}
+.background-modal {
+  background-color: rgba(0,0,0,.4);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+.simpleProgress {
+  margin-bottom: 0px !important;
+  background-color: #f9f9f9;
+}
+.dropdown.dropdown-up {
+  .dropdown-menu {
+    top: auto;
+    bottom: 150%;
+  }
+}
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+.lbl-btn {
+  font-size: 12px;
+  line-height: 12px;
+  padding: 0;
+  label {
+    margin: 0;
+    padding: 1px 5px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+.m {
+  .vb-dragger-styler{
+    display: none !important;
+  }
+}
+// .lock {
+//   width: 100%;
+//   height: 100%;
+//   position: absolute;
+//   background-color: rgba(0,0,0,0.3);
+//   z-index: 2314;
+// }
+// .sp {
+//   font-size: 100px;
+//   color: #fff;
+//   margin-top: 200px;
+// }
+// .nav-header .btn:not(.btn-image) {
+//   padding-left: 8px;
+//   padding-right: 8px;
+//   @include lg {
+//     padding-left: 12px;
+//     padding-right: 12px;
+//   }
+// }
+// Inbox Specific Styles
+#inbox {
+  .activeScroll {
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      display: block!important;
+      width: 6px;
+      background-color: rgba(0,0,0,0);
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #646464;
+      border-radius: 11px;
+    }
+  }
+}
+.scroll-heigth {
+  height: 300px;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    display: block!important;
+    width: 4px;
+    background-color: #F5F5F5;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,0.5);
+  }
+}
+.truncate-text {
+  display: inline-block;
+  width: 70px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.simple-separator {
+  height: 1px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: $block-border;
+}
+.show-scrollbar {
+  &::-webkit-scrollbar {
+    display: block!important;
+    width: 4px;
+    background-color: rgba(0,0,0,0);
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: lighten($dark-blue, 50%);
+    transition: all .3s ease-in-out;
+    border-radius: 2px;
+  }
+  &:hover {
+    &::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      cursor: pointer;
+      background-color: lighten($dark-blue, 30%);
+    }
+  }
+}
+.under-input-tag-container {
+  height: 22px;
+  padding-top: 5px;
+  .multiselect__tag {
+    margin: 0;
+  }
+}
+.mr-doc {
+  display: flex;
+  .mr-doc--message {
+    flex-grow: 1;
+  }
+  .mr-doc--image {
+    flex-shrink: 0;
+    >img {
+      width: 55px;
+      margin-top: -10px;
+      box-shadow: 0 2px 4px 0 rgba(0,0,0,0.15);
+    }
+  }
+}
+.image-placeholder-block {
+  position: relative;
+  flex-shrink: 0;
+  width: 55px;
+  overflow: hidden;
+  .image-placeholder {
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    font-size: 22px;
+    color: $dark-blue;
+    background-color: #E2E7ED;
+    >i {
+      align-self: center;
+    }
+  }
+  .image-real {
+    >img {
+      width: 55px;
+    }
+  }
+}

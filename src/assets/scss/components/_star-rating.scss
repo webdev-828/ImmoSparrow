@@ -1,0 +1,102 @@
+//
+// Star Rating
+//
+.star-rating {
+  display: flex;
+  .star-wrap {
+    position: relative;
+    width: 17px;
+    height: 18px;
+    margin-right: 2px;
+    font-size: 18px;
+    .back-star, .front-star {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .back-star {
+      color: #f3f3f3;
+    }
+    .front-star {
+      color: #f3b760;
+    }
+  }
+  &.rating-05 {
+    .star-2, .star-3, .star-4, .star-5 {
+      .front-star { display: none; }
+    }
+    .star-1 {
+      .front-star {
+        width: 9px;
+        overflow: hidden;
+      }
+    }
+  }
+  &.rating-10 {
+    .star-2, .star-3, .star-4, .star-5 {
+      .front-star { display: none; }
+    }
+  }
+  &.rating-15 {
+    .star-3, .star-4, .star-5 {
+      .front-star { display: none; }
+    }
+    .star-2 {
+      .front-star {
+        width: 9px;
+        overflow: hidden;
+      }
+    }
+  }
+  &.rating-20 {
+    .star-3, .star-4, .star-5 {
+      .front-star { display: none; }
+    }
+  }
+  &.rating-25 {
+    .star-4, .star-5 {
+      .front-star { display: none; }
+    }
+    .star-3 {
+      .front-star {
+        width: 9px;
+        overflow: hidden;
+      }
+    }
+  }
+  &.rating-30 {
+    .star-4, .star-5 {
+      .front-star { display: none; }
+    }
+  }
+  &.rating-35 {
+    .star-5 {
+      .front-star { display: none; }
+    }
+    .star-4 {
+      .front-star {
+        width: 9px;
+        overflow: hidden;
+      }
+    }
+  }
+  &.rating-40 {
+    .star-5 {
+      .front-star { display: none; }
+    }
+  }
+  &.rating-45 {
+    .star-5 {
+      .front-star {
+        width: 9px;
+        overflow: hidden;
+      }
+    }
+  }
+}
+// End Star Rating
+.fa-star.half-filled {
+  width: 9px;
+  height: 18px;
+  overflow: hidden;
+}

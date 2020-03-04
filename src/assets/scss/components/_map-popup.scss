@@ -1,0 +1,290 @@
+// 
+// Custom Map Popup
+//
+.mapboxgl-popup-wrap {
+  .no-button {
+    background: none;
+    border: none;
+    font-size: 12px;
+    padding: 0 5px;
+    outline: none;
+    font-weight: bold;
+    min-width: 60px;
+  }
+  .close-button {
+    position: absolute;
+    top: -15px;
+    right: -12px;
+    background: #fff;
+    width: 18px;
+    height: 20px;
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  .tooltip-ads-wrap {
+    padding: 0px 10px 5px;
+    .data-section.stand-out {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  .flex-slider-box {
+    display: flex;
+    align-items: stretch;
+    .control {}
+    .carousel-wr {
+      width: 210px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
+  //box-shadow: 0 3px 8px 0 rgba(61, 90, 142, 0.2);
+  .flex-row {
+    display: flex;
+    width: 100%;
+    padding: 6px 10px;
+    flex-wrap: nowrap;
+    font-size: 11px;
+    color: #2c343f;
+    .poperty-data {
+      flex-grow: 1;
+      color: #7e7e7e;
+      .switch {
+        margin-top: 0;
+        margin-bottom: 0;
+        &.switch-bg-smooth {
+          input:checked + span {
+            background-color: #ff6c9d;
+          }
+        }
+      }
+    }
+    .value-data {
+      flex-grow: 1;
+      min-width: 20%;
+      text-align: right;
+      font-weight: 600;
+      .btn-deepen {
+        margin: -4px;
+        margin-left: 4px;
+      }
+    }
+    &:nth-child(odd) {
+      background-color: #f9f9f9;
+    }
+    &.no-side-padding {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    &.no-bg {
+      background-color: transparent;
+    }
+    &.thinner {
+      padding: 4px 10px;
+    }
+    &.highlighted {
+      background-color: #edf6fd !important;
+    }
+  }
+  .cursor-pointer {
+    cursor: pointer;
+  }
+  .hide-slider {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+  }
+}
+// 
+// Second Custom Map Popup
+// 
+.popup-item {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  position: relative;
+  width: 230px;
+  max-height: 300px;
+  box-shadow: 0 4px 15px 0 rgba(61,90,142,0.4);
+  border-radius: 4px;
+  .placeholder {
+    height: 120px;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+  }
+  .item-description {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    position: relative;
+    overflow: hidden;
+    height: 120px;
+    padding: 10px;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0,0,0,.5);
+    background-image: linear-gradient(-180deg, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 100%);
+    .item-picture {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      opacity: .6;
+      overflow: hidden;
+      background-size: cover;
+      background-position: center;
+      transition: all .3s ease-in-out;
+    }
+    .title {
+      z-index: 1;
+      font-weight: 600;
+      font-size: 18px;
+    }
+  }
+  .item-details {
+    flex-grow: 1;
+    overflow-y: scroll;
+    padding: 10px;
+    font-size: 14px;
+    background: #FFFFFF;
+    .data-section {
+      .section-label {
+        display: flex;
+        flex-wrap: nowrap;
+        height: 44px;
+        .label-copy {
+          flex-grow: 1;
+          flex-shrink: 1;
+          align-self: center;
+          font-size: 10px;
+          text-transform: uppercase;
+          letter-spacing: .05em;
+          font-weight: 700;
+        }
+        .section-controls {
+          flex-shrink: 0;
+          align-self: center;
+        }
+      }
+      .section-content {
+        .table-flex-col {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          margin-bottom: 10px;
+          .table-col {
+            flex-basis: 0;
+            flex-grow: 1;
+            flex-shrink: 0;
+          }
+          .flex-row {
+            display: flex;
+            width: 100%;
+            padding: 6px 10px;
+            flex-wrap: nowrap;
+            font-size: 11px;
+            color: #2c343f;
+            .poperty-data {
+              flex-grow: 1;
+              color: #7e7e7e;
+            }
+            .value-data {
+              flex-grow: 1;
+              text-align: right;
+              font-weight: 600;
+              a i {
+                font-size: 15px;
+              }
+            }
+            &:nth-child(odd) {
+              background-color: #f9f9f9;
+            }
+          }
+        }
+      }
+    }
+  }
+  .visible-scroll {
+    &::-webkit-scrollbar {
+      display: block!important;
+      width: 4px;
+      background-color: #F5F5F5;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #000000;
+    }
+  }
+  .photo,.text{
+    float: left;
+  }
+  .photo {
+    width: 76px;
+    overflow: hidden;
+    margin-right: 10px;
+    img {
+      width: 100%;
+    }
+  }
+  .text {
+    width: 94%;
+  }
+  .marker_title{
+    text-align: left;
+    text-transform: none !important;
+    span {
+      float: left !important;
+      cursor: pointer;
+    }
+  }
+  .r{
+    border-bottom: 1px solid #ebebeb; padding-bottom: 5px; float: left; width: 100%;
+    padding-top: 5px; word-break: break-all;
+  }
+  .r:last-child{
+    border-bottom: none !important;
+  }
+  .title, .address, .area {
+    float: left;
+    width: 100%;
+  }
+  .title {
+    font-size: 14px;
+  }
+  .address, .area{
+    font-size: 14px;
+  }
+  .vb-content {
+    height: 200px !important;
+  }
+  .vb{
+    width: 100% !important;
+  }
+  .active{
+    background: #fafafa;
+  }
+  .small {
+    .vb-content{
+      height: auto !important;
+    }
+  }
+  .mapboxgl-popup-close-button {
+    z-index: 1 !important;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    background-color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px 0 rgba(61,90,142,0.4);
+  }
+  .mapboxgl-popup-close-button:hover {
+    background-color: #f9f9f9;
+  }
+}
+// 

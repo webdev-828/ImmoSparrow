@@ -1,0 +1,13 @@
+.label-icon {
+  position: relative;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: block;
+  .btn-block {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    width: 21px;
+    top: 0;
+  }
+}

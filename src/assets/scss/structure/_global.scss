@@ -1,0 +1,108 @@
+// GLOBAL LAYOUT
+#app {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  #page-container {
+    #cssmenu {
+      position: fixed;
+    }
+    #header-navbar {}
+  }
+  #total-footer {
+    position: fixed;
+  }
+}
+// Second Sidebar
+$second-sidebar-width: 320px;
+// Content block with a second sidebar
+#main-container {
+  &.with-second-sidebar {
+    .content {
+      margin-left: $second-sidebar-width;
+    }
+  }
+}
+#main-container.with-second-sidebar + #page-footer {
+  margin-left: $second-sidebar-width;
+}
+// Features/Bundles
+.mode.mode-upgrade-plan {
+  // list here all elements you need to blur in upgrade-plan mode
+  .map-wrapper, .vb-content, .blurredOut, .dashboard-head {
+    filter: blur(5px);
+    transition: filter .3s ease-in-out;
+  }
+}
+//
+.vb-content {
+  -webkit-overflow-scrolling: touch;
+}
+.vb-content::-webkit-scrollbar {
+  display: none !important;
+}
+// Beta Mode
+body.beta-mode:after{
+  content: "beta";
+  position: fixed;
+  width: 80px;
+  height: 25px;
+  background: rgba(255, 0, 0, 0.6);
+  top: 7px;
+  right: -20px;
+  text-align: center;
+  font-size: 13px;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #fff;
+  line-height: 27px;
+  -ms-transform:rotate(45deg);
+  -webkit-transform:rotate(45deg);
+  transform:rotate(45deg);
+  z-index: 10000;
+  @include lg {
+    width: 150px;
+    height: 26px;
+    top: 25px;
+    left: -34px;
+    font-size: 14px;
+    line-height: 26px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    z-index: 10000;
+  }
+}
+//
+.tab-pane {
+  margin-bottom: 0px !important;
+}
+//
+body {
+  overflow-y: hidden;
+}
+::-webkit-scrollbar {
+  display: none !important;
+}
+a {
+  cursor: pointer;
+}
+#total-footer {
+  z-index: 99999;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 1px 6px 2px;
+  background: rgba(39,49,66,.5);
+  font-size: 11px;
+  color: $white;
+  a {
+    color: $white;
+    &:hover {
+      color: $dark-blue;
+    }
+  }
+}

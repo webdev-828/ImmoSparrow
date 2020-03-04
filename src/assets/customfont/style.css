@@ -1,0 +1,120 @@
+@font-face {
+  font-family: 'custom-icons';
+  src:  url('fonts/custom-icons.eot?nnem5a');
+  src:  url('fonts/custom-icons.eot?nnem5a#iefix') format('embedded-opentype'),
+    url('fonts/custom-icons.ttf?nnem5a') format('truetype'),
+    url('fonts/custom-icons.woff?nnem5a') format('woff'),
+    url('fonts/custom-icons.svg?nnem5a#custom-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'custom-icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-pipe:before {
+  content: "\e91e";
+}
+.icon-connectivity:before {
+  content: "\e916";
+}
+.icon-education:before {
+  content: "\e917";
+}
+.icon-immissions:before {
+  content: "\e918";
+}
+.icon-noise:before {
+  content: "\e919";
+}
+.icon-poi:before {
+  content: "\e91a";
+}
+.icon-shopping:before {
+  content: "\e91b";
+}
+.icon-view:before {
+  content: "\e91c";
+}
+.icon-neighborhood:before {
+  content: "\e91d";
+}
+.icon-overview:before {
+  content: "\e915";
+}
+.icon-hook:before {
+  content: "\e914";
+}
+.icon-no-image:before {
+  content: "\e913";
+}
+.icon-parking:before {
+  content: "\e911";
+}
+.icon-admin:before {
+  content: "\e90a";
+}
+.icon-agency:before {
+  content: "\e90b";
+}
+.icon-dashboard:before {
+  content: "\e90c";
+}
+.icon-inbox:before {
+  content: "\e90d";
+}
+.icon-marketradar:before {
+  content: "\e90e";
+}
+.icon-portfolio:before {
+  content: "\e90f";
+}
+.icon-priceprediction:before {
+  content: "\e910";
+}
+.icon-surface:before {
+  content: "\e912";
+}
+.icon-vendor:before {
+  content: "\e909";
+}
+.icon-apartment:before {
+  content: "\e901";
+}
+.icon-business:before {
+  content: "\e904";
+}
+.icon-home:before {
+  content: "\e906";
+}
+.icon-multifamilyhouse:before {
+  content: "\e907";
+}
+.icon-price-up:before {
+  content: "\e900";
+}
+.icon-price-down:before {
+  content: "\e908";
+}
+.icon-mountains:before {
+  content: "\e903";
+}
+.icon-slope:before {
+  content: "\e902";
+}
+.icon-area:before {
+  content: "\e905";
+}

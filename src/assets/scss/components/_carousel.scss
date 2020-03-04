@@ -1,0 +1,58 @@
+.detail-content .VueCarousel-dot-container .VueCarousel-dot {
+  margin-top: 0 !important;
+  padding-top: 6px !important;
+  padding-bottom: 6px !important;
+}
+.detail-content .VueCarousel-navigation .VueCarousel-navigation-button {
+  margin-top: -18px;
+  color: #fff  !important;
+  text-shadow: 0 0 2px #000;
+  text-align: center;
+  top: 30px !important;
+  height: 250px !important;
+  width: 30px !important;
+  transform: translateY(0) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.detail-content .VueCarousel-navigation .VueCarousel-navigation-prev {
+  left: 0 !important;
+}
+.detail-content .VueCarousel-navigation .VueCarousel-navigation-next {
+  right: 0 !important;
+}
+.VueCarousel-navigation-button[data-v-453ad8cd]:focus{
+  outline: none !important;
+}
+.VueCarousel-slide {
+  min-height: 280px;
+  overflow: hidden;
+  img {
+    width: 100%;
+  }
+}
+.carousel-block {
+  .image {
+    cursor: pointer;
+    i {
+      float: right;
+      margin-top: 8px;
+      margin-right: 8px;
+      color: #fff;
+      cursor: pointer;
+    }
+    i:hover {
+      color: orange;
+    }
+  }
+}
+.blueimp-gallery {
+  position: fixed;
+  width: calc(100vw - 59px);
+  transform: translateX(calc(-100% + 450px));
+}
+.VueCarousel.section-content, .VueCarousel.h-auto {
+  .VueCarousel-slide{
+    min-height: auto !important;
+  }
+}

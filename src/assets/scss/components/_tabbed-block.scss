@@ -1,0 +1,55 @@
+//
+// Contained Tabbed Block
+//
+.contained-tabbed-block {
+  margin-bottom: 10px;
+  .tabs-line {
+    display: flex;
+    .tab {
+      padding: 8px 10px 8px;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      font-weight: 700;
+      cursor: pointer;
+      &.active {}
+    }
+    .controls {
+      flex-grow: 1;
+      text-align: right;
+    }
+  }
+  .content-line {
+    padding: 10px;
+    .content-group {}
+  }
+  &.wider {
+    .content-line {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  &.underlined-tab {
+    .tabs-line {
+      .tab {
+        padding: 9px 0px 0px;
+        height: 28px;
+        border-bottom: 2px solid transparent;
+        &:first-child {
+          margin-right: 10px;
+        }
+      }
+      .tab.active {
+        border-bottom: 2px solid $dark-blue;
+      }
+      .tab:not(.active) {
+        &:hover {
+          border-bottom: 2px solid #c9c9c9;
+        }
+      }
+    }
+  }
+  &.separated {
+    border-bottom: 2px solid $dark-blue;
+  }
+}

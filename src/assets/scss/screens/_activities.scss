@@ -1,0 +1,7 @@
+.activity-details-columns {
+  display: flex;
+  flex-wrap: nowrap;
+  .input-container {
+      flex-grow: 1;
+  }
+}

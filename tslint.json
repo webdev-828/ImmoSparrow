@@ -1,0 +1,32 @@
+{
+  "rulesDirectory": "./tslintCustomRules",
+  "extends": [
+    "tslint-config-airbnb"
+  ],
+  "linterOptions": {
+    "exclude": [
+      "./src/components/map/radius.js",
+      "./tslintCustomRules",
+      "node_modules/**"
+    ]
+  },
+  "rules": {
+    "no-console": true,
+    "no-any": false,
+    "no-try-catch": false,
+    "no-this-assignment": false,
+    "prefer-array-literal": false,
+    "radix": false,
+    "import-name": false,
+    "max-line-length": [
+      true,
+      {
+        "limit": 250
+      }
+    ],
+    "align": [
+      true,
+      "parameters"
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+.pagination{
+  margin-top: 0 !important;
+  margin-bottom: 0;
+  > li {
+    margin-bottom: 0;
+  }
+  &.to-the-right {
+    float: right;
+  }
+}

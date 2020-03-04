@@ -1,0 +1,125 @@
+//
+// Object Detail Compact
+//
+.object-detail-compact {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-bottom: 10px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  .detail-image {
+    position: relative;
+    flex-shrink: 0;
+    width: 100px;
+    overflow: hidden;
+    .image-placeholder {
+      display: flex;
+      justify-content: center;
+      height: 100%;
+      font-size: 40px;
+      color: $dark-blue;
+      background-color: #E2E7ED;
+      >i {
+        align-self: center;
+      }
+    }
+    .image-real {
+      position: absolute;
+      display: block;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background-size: cover;
+      background-position: center;
+      transition: all .3s ease-out;
+    }
+    .status-marker {
+      display: none;
+    }
+  }
+  .detail-data {
+    flex-grow: 1;
+    padding: 8px;
+    padding-bottom: 0px;
+    .shown-compact {
+      display: none;
+    }
+    .data-name {
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 14px;
+    }
+    .data-parameters {}
+  }
+  &.selected {
+    box-shadow: 0 2px 8px 0 rgba(51,63,82,0.19);
+    border-color: $blue;
+    margin-top: 12px;
+    .detail-data .data-parameters .fluid-data-table .fluid-cell-wrap:last-child {
+      .attribute, .value {
+        border-bottom: none;
+      }
+    }
+  }
+  &:hover {
+    background-color: $tablerowbg;
+    .detail-image .image-real {
+      top: -5px;
+      right: -5px;
+      left: -5px;
+      bottom: -5px;
+    }
+  }
+  &.has-border {
+    border: 1px solid $block-border;
+    .detail-data .data-parameters .fluid-data-table .fluid-cell-wrap:last-child {
+      .attribute, .value {
+        border-bottom: none;
+      }
+    }
+  }
+  &.in-btn.selected {
+    box-shadow: none;
+    border: none;
+    margin: 0px;
+    .detail-image {
+      width: 50px;
+      .image-placeholder {
+        font-size: 22px;
+      }
+      .status-marker {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 3px;
+      }
+    }
+    .detail-data .data-name {
+      width: 180px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      text-align: left;
+    }
+    .hidden-compact {
+      display: none;
+    }
+    .shown-compact {
+      display: block;
+      width: 180px;
+      padding-bottom: 5px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      text-align: left;
+      font-size: 11px;
+      font-weight: 400;
+    }
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}
+//

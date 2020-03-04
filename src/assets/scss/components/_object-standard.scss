@@ -1,0 +1,165 @@
+// Block With an Image
+.block.with-image {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 35px;
+  .item-flap {
+    position: absolute;
+    display: flex;
+    top: -21px;
+    left: 0;
+    .not-viewed, .entry-date {
+      height: 21px;
+      padding-left: 8px;
+      padding-right: 5px;
+      color: $white;
+      font-size: 12px;
+      line-height: 21px;
+    }
+    .not-viewed {
+      padding-right: 9px;
+      background-color: $blue2;
+      //text-transform: uppercase;
+    }
+    .entry-date {
+      position: relative;
+      background-color: rgba(51,63,82,.5);
+      &:after {
+        position: absolute;
+        top: 0;
+        left: 100%;
+        display: block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 21px 0 0 10px;
+        border-color: transparent transparent transparent rgba(51,63,82,.5);
+        content: "";
+      }
+    }
+  }
+  .block-image {
+    flex-grow: 1;
+    width: 100%;
+    @media (min-width: 1200px) { width: 30%; }
+    min-height: 180px;
+    position: relative;
+    overflow: hidden;
+    .like-block {
+      position: absolute;
+      bottom: 0;
+      left: 10px;
+    }
+    .status-tags {
+      position: absolute;
+      top: 0;
+      left: 10px;
+    }
+    img {
+      position: absolute;
+    }
+    .placeholder, .object-image {
+      position: absolute;
+      display: block;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background-size: cover;
+      background-position: center;
+      transition: all .3s ease-out;
+    }
+    @include lg {
+      min-height: 300px;
+    }
+  }
+  .block-not-image {
+    flex-grow: 1;
+    width: 100%;
+    @media (min-width: 1200px) { width: 70%; }
+    .block-header {
+      display: flex;
+      flex-direction: column;
+      @include lg {
+        flex-direction: row;
+      }
+      .header-data {
+        flex-grow: 2;
+        flex-basis: 50%;
+      }
+      .select-option {
+        flex-grow: 1;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-end;
+        text-align: left;
+        >* {
+          margin-left: 5px;
+          &:first-child {
+            margin-left: 0;
+          }
+        }
+        @include lg {
+          text-align: right;
+        }
+        .css-checkbox {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          margin-top: 0;
+          @include lg {
+            position: relative;
+            top: auto;
+            right: auto;
+          }
+        }
+      }
+    }
+  }
+  &:hover {
+    .block-image {
+      .object-image {
+        top: -15px;
+        right: -15px;
+        left: -15px;
+        bottom: -15px;
+      }
+    }
+  }
+  .mapBox {
+    position: relative;
+    height: 300px;
+  }
+  &.can-be-selected {
+    position: relative;
+    &.selected {
+      outline: 3px solid #46c37b;
+    }
+    &.in-sidebar {
+      outline: 3px solid #70b9eb;
+    }
+  }
+  #map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+  }
+  .col-xs-4 {
+    float: none;
+    width: 100%;
+    @include lg {
+      float: left;
+      width: 33.333333%;
+    }
+  }
+}
+.selectedItem {
+  outline: 3px solid #70b9eb;
+}
+// Not Viewed Block
+.block.not-viewed-yet {
+  box-shadow: 0 5px 13px 0 rgba(0,0,0,.2);
+}

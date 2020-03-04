@@ -1,0 +1,69 @@
+<template>
+  <div id="search">
+    <left-sidebar
+      :travelPolygonPoint="travelPolygonPoint"
+      :addressForRemoveFromList="addressForRemoveFromList"
+      :addressFromMap="addressFromMapObject"
+      :shapeFromMap="shapeFromMap"
+      :travelPolygon="travelPolygon"
+      :shapeWithUpdatedRadius="shapeWithUpdatedRadius"
+      :addressWithRadiusUpdated="addressWithRadiusUpdated"
+      :viewPortForSearchShapes="viewPortForSearchShapes"
+      @getViewPort="getViewPort"
+      @removeLayerById="removeLayerById"
+      @addSymbolLayer="addSymbolLayer"
+      @removeShapeFromMap="removeShapeFromMap"
+      @addAddressShapeToMap="addAddressShapeToMap"
+      @addShapeToMap="addShapeToMap"
+      @removeAddressFromMap="removeAddressFromMap"
+      @travelTimeUpdate="travelTimeUpdate"
+      @setTravelPoint="setTravelPoint"
+      @interactWithMap="interactWithMap"
+      @startPolygonDraw="startPolygonDraw"
+      @addOrUpdateLayerWithRadius="addOrUpdateLayerWithRadius"
+      @addViewPortToTheMap="addViewPortToTheMap"
+      @resetMap="resetMapStyle"
+      @setInteractWithMap="setInteractWithMap"
+      @changeSearchArealLayersVisibility="changeSearchArealLayersVisibility"
+      @fitMapToSearchArea="fitMapToSearchArea"
+    />
+    <overview-list v-show="$store.getters['globalStatesModule/showOverviewList']"/>
+    <!--<map-box @setAdsInViewport="setAdsInViewport" :showAd="showAd"></map-box>-->
+    <!--<div class="loader1" v-if="$store.getters['globalStatesModule/loadingSearchResults']" v-bind:class="{fifty: $store.getters['globalStatesModule/showMapRightSidebar']}">
+      <i class="fa fa-circle-o-notch fa-spin"></i>
+    </div> -->
+    <search-map
+      :interactWithLayersOnMap="interactWithLayersOnMap"
+      :layerToRemoveById="layerToRemoveById"
+      :travelTimeData="travelTimeData"
+      :symbolLayerFromMap="symbolLayerFromMap"
+      :addressForTheMap="addressForTheMap"
+      :addressForRemoveFromMap="addressForRemoveFromMap"
+      :shapeForRemoveFromMap="shapeForRemoveFromMap"
+      :setTravelPointValue="setTravelPointValue"
+      :drawPolygonMode="drawPolygonMode"
+      :layerWithRadius="layerWithRadius"
+      :viewPortForSearchMap="viewPortForSearchMap"
+      :getViewPortModel="getViewPortModel"
+      :resetMap="resetMap"
+      :mapInteraction="mapInteraction"
+      :searchArealLayersVisibility="searchArealLayersVisibility"
+      :shapeToDrawOnMap="shapeToDrawOnMap"
+      :mapToSearchArea="mapToSearchArea"
+      :showAd="showAd"
+      @travelPolygonPointCreated="travelPolygonPointCreated"
+      @travelPolygonCreated="travelPolygonCreated"
+      @polygonCreated="polygonCreated"
+      @circleCreated="circleCreated"
+      @addressFromMapRemove="addressFromMapRemove"
+      @addressFromMap="addressFromMap"
+      @updateShapeGeometry="updateShapeGeometry"
+      @layerWithRadiusUpdated="layerWithRadiusUpdated"
+      @addViewPortToSearchShapes="addViewPortToSearchShapes"
+      @adsInViewport="setAdsInViewport"/>
+    <map-right-sidebar
+      v-show="$store.getters['globalStatesModule/showMapRightSidebar']"
+      :mapSearchResults="mapSearchResults"
+      @selectAd="selectAd"/>
+  </div>
+</template>
