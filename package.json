@@ -42,7 +42,7 @@
     "accounting": "^0.4.1",
     "appcache-webpack-plugin": "^1.4.0",
     "appcache-webpack-plugin-plus": "^2.0.3",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "bentley-ottman-sweepline": "^0.1.4",
     "bootstrap": "^3.3.6",
     "bootstrap-vue": "2.0.0-rc.16",
